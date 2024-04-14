@@ -20,12 +20,12 @@
         if (mysqli_num_rows($checkResult) == 0) {
             $query = "INSERT INTO Session_Participants (SessionID, StudentID) VALUES ('$sessionID', '$studentID')";
             if(mysqli_query($connection, $query)) {
-                echo "<script>alert('You have successfully booked the session.'); window.location.href='tutor_profile.php';</script>";
+                echo "<script>alert('You have successfully booked the session.'); window.location.href='../view/tutor_profile.php';</script>";
             } else {
-                echo "<script>alert('Error booking session.'); window.location.href='tutor_profile.php';</script>";
+                echo "<script>alert('Error booking session.'); window.location.href='../view/tutor_profile.php';</script>";
             }
         } else {
-            echo "<script>alert('You are already registered for this session.'); window.location.href='tutor_profile.php';</script>";
+            echo "<script>alert('You are already registered for this session.'); window.location.href='../view/tutor_profile.php';</script>";
         }
         mysqli_close($connection);
     }
